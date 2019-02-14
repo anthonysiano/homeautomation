@@ -1,0 +1,35 @@
+{
+            "platform": "Camera-ffmpeg",
+            "cameras": [
+                {
+                    "name": "Driveway",
+                    "videoConfig": {
+                        "source": "-re -i /Users/username/.homeassistant/downloads/driveway/latest.mpg",
+                        "maxStreams": 2,
+                        "maxWidth": 1280,
+                        "maxHeight": 720,
+                        "maxFPS": 30
+                    }
+                },
+                {
+                    "name": "Front Door",
+                    "videoConfig": {
+                        "source": "-re -i /Users/username/.homeassistant/downloads/frontdoor/latest.mpg",
+                        "maxStreams": 2,
+                        "maxWidth": 1280,
+                        "maxHeight": 720,
+                        "maxFPS": 30
+                    }
+                },
+                {
+                    "name": "Back Yard",
+                    "videoConfig": {
+                        "source": "-re -i /Users/username/.homeassistant/downloads/backyard/latest.mpg",
+                        "maxStreams": 2,
+                        "maxWidth": 1280,
+                        "maxHeight": 720,
+                        "maxFPS": 30
+                    }
+                }
+            ]
+        }

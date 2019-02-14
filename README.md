@@ -1,2 +1,3 @@
 # homeautomation
-# homeautomation
+
+Various home automation stuff.

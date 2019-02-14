@@ -1,0 +1,23 @@
+- alias: ring-downloader
+  trigger:
+    platform: time_pattern
+    minutes: '/1'           #every 1 minute
+  action:
+  - service: downloader.download_file
+    data_template:
+      url: "{{ states.camera.back_yard.attributes.video_url }}"
+      subdir: "backyard"
+      filename: "latest.mpg"
+      overwrite: yes
+  - service: downloader.download_file
+    data_template:
+      url: "{{ states.camera.front_yard.attributes.video_url }}"
+      subdir: "driveway"
+      filename: "latest.mpg"
+      overwrite: yes
+  - service: downloader.download_file
+    data_template:
+      url: "{{ states.camera.front_door.attributes.video_url }}"
+      subdir: "frontdoor"
+      filename: "latest.mpg"
+      overwrite: yes

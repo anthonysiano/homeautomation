@@ -1,0 +1,7 @@
+ring:
+  username: <username>
+  password: <password>
+camera:
+  - platform: ring
+downloader:
+  download_dir: downloads #on MacOS this is /Users/username/.homeassistant/downloads
